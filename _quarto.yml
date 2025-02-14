@@ -1,17 +1,19 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "aiden-roach-portfolio"
+  title: "Aiden Roach's ePortfolio"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "Home"
+      - href: about.qmd
+        text: "About Me"
 
 format:
   html:
-    theme: cosmo
+    theme: united
     css: styles.css
     toc: true
 
