@@ -4,39 +4,43 @@ author: "Aiden Roach"
 format: html
 ---
 
-## Data Description          
+## Data Description
 
-### 1. 
-Identify your data source.       
+### 1.
+
+Identify your data source.
 
 > My data comes from Prince Albert National Park in Canada.
 
-### 2. 
-Describe your data, including variables and data types.           
+### 2.
+
+Describe your data, including variables and data types.
 
 > The data was collected using seven snow transects. After 48 hours, the tracks left by mammals were recorded every 100 meters. The transects were refreshed either by fresh snowfall or by a drag pulled by a snowmobile. There are a lot of variables included, but the most important ones for my research questions are period which is recorded as a character, month, day, and year which are recorded as integers, cloudcover which is an integer, precipetation which is a character, temperature which is an integer, and plant community which is a character. Each species is listed as a variable with their presence recorded at a one and their absence recorded as a zero.
 
-### 3. 
-Identify the research questions you want to answer.         
+### 3.
+
+Identify the research questions you want to answer.
 
 > Some research questions I want to answer are how does species abundance vary over time, over temperature, and/or over different plant communities?
 
-
-
 ## Data Visualization
 
-### 1. 
-What do you want your final visualizations to look like?            
+### 1.
+
+What do you want your final visualizations to look like?
 
 > I think I will do scatterplots with time/ temperature on the x axis with abundance on the y axis. Then I would color by species to show when certain species were present or absent. For plant communities, I would have a bar chart with community on the x axis and overall species richness on the y axis. I might also split the data into small, medium, and large mammal categories to declutter the graphics.
 
-### 2. 
-What do you want to highlight on your final visualizations in order to answer your research questions? How do you plan to do that?         
+### 2.
+
+What do you want to highlight on your final visualizations in order to answer your research questions? How do you plan to do that?
 
 > I want to highlight the variety of species by coloring by species or spliting in small, medium, or large categories.
 
-### 3. 
-What is missing from your data or would need to change in your data to create these visualizations?        
+### 3.
+
+What is missing from your data or would need to change in your data to create these visualizations?
 
 > I would have to create the small, medium, and large categories myself. I would look into each species to create the bins. EX: if the average hare size is 6 pounds they might fit better in the small bin, but if the average hare is 8 pounds they might fit in the medium bin.
 
@@ -44,50 +48,56 @@ What is missing from your data or would need to change in your data to create th
 
 The answer to at least three of these questions should be “YES” for the data to meet the necessary standards to demonstrate your cleaning. Your data source should not be an already perfectly prepared data set.
 
-### 1. 
-Do you need to reformat any variables into different types (e.g. factors, time, dates, strings)? Or remove information from variable values?      
+### 1.
+
+Do you need to reformat any variables into different types (e.g. factors, time, dates, strings)? Or remove information from variable values?
 
 > No, I don't think I need to reformat any variables.
 
-### 2. 
-Do you need to deal with any missing data, especially missing data coded other than NA?         
+### 2.
+
+Do you need to deal with any missing data, especially missing data coded other than NA?
 
 > Yes, any missing values are just recorded as "na" and are not registered as a missing value.
 
-### 3. 
-Do you need to filter your data? How?    
+### 3.
+
+Do you need to filter your data? How?
 
 > No, I don't need to filter the data.
 
-### 4. 
-Do you need to create any new variables? What variables? How?       
+### 4.
+
+Do you need to create any new variables? What variables? How?
 
 > Yes, I would use mutate to create the size bins I mentioned earlier.
 
-### 5. 
-Do you need to add new data (join) to your data? What data? How?        
+### 5.
+
+Do you need to add new data (join) to your data? What data? How?
 
 > No, as of right now I don't think I need to add new data.
 
-### 6. 
-Are there any variables you can exclude from your data?        
+### 6.
+
+Are there any variables you can exclude from your data?
 
 > Yes, I can exclude the snow start, middle, and end times.
 
-### 7. 
-Do you need pivot your data in any way? Why? How?        
+### 7.
+
+Do you need pivot your data in any way? Why? How?
 
 > No, I don't think I need to pivot my data.
 
-### 8. 
-Do you need to summarize any of the variables? Which ones? How?         
+### 8.
+
+Do you need to summarize any of the variables? Which ones? How?
 
 > Yes, I would summarize the total number of times each species was observed.
 
-### 9. 
-What other aspects of your data need to be “fixed” in order to make your data visualizations?        
+### 9.
+
+What other aspects of your data need to be “fixed” in order to make your data visualizations?
 
 > I could maybe condense month, day, and year into a singular time variable.
-
-
-

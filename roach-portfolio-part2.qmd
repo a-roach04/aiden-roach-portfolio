@@ -1,0 +1,86 @@
+---
+title: "Portfolio Part 2"
+author: "Aiden Roach"
+format: html
+---
+
+## Part 1 - Data Cleaning
+
+```{r}
+#| label: load-packages-data
+library(tidyverse)
+mammal_dirty <- read_csv("data-raw/mammal-abundance.csv")
+```
+
+```{r}
+mammal_clean <- mammal_dirty |> 
+  select(!c(surveyyear, transect, dss, period, snowstart, snowmid, snowend, observer, obsnum, dirwind, crustart, crumid,cruend, ytemp, ywind, ywdir, segment, segid, comments)) |> #remove unneeded variables
+  mutate(across(where(is.character), ~na_if(., "na"))) |> #reassign NA values
+  mutate(month = as.double(month), snowave = as.numeric(snowave), cloudcover = as.numeric(cloudcover), avewind = as.numeric(avewind), precip = as.numeric(precip), temp = as.numeric(temp), periodnum = as.character(periodnum), plantcomm = as.character(plantcomm)) #reassign variable types
+```
+
+## Part 2 - Data Visualization
+
+```{r}
+#| label: plant-community-graphics
+
+mammal_clean |> 
+  select(plantcomm, richness) |>
+  group_by(plantcomm) |> 
+  summarise(rich_avg = mean(richness)) |> 
+  ggplot() + 
+  geom_col(mapping = aes(x = fct_infreq(plantcomm), 
+                         y = rich_avg), 
+                         fill = "forestgreen",
+                         color = "darkgreen") + 
+  labs(x = "Plant community in Prince Albert National Park, Canada", 
+       y = "Average species richness") +
+  scale_x_discrete(labels=c("cp" = "Conifer - Pine", 
+                            "cs" = "Conifer - Spruce", 
+                            "da" = "Deciduous - Aspen", 
+                            "dg" = "Dry Grassland", 
+                            "fen" = "Tamarack Bog", 
+                            "mw" = "Mixed Wood", 
+                            "rip" = "Riparian", 
+                            "wg" = "Wet Grassland")) + 
+  theme(axis.text.x = element_text(size = 8, angle = 15))
+
+```
+
+```{r}
+#| label: temperature-graphics
+
+mammal_clean |> 
+  select(temp, richness) |> 
+  group_by(temp) |> 
+  summarise(rich_avg = mean(richness)) |> 
+  ggplot() + 
+  geom_col(mapping = aes(x = temp, 
+                         y = rich_avg), 
+                         fill = "skyblue2",
+                         color = "skyblue4") + 
+  labs(x = "Daily temperature, in Celsius, in Prince Albert National Park", 
+         y = "Average species richness")      
+
+```
+
+```{r}
+#| label: period-graphics
+
+mammal_clean |> 
+  select(periodnum, richness) |> 
+  group_by(periodnum) |> 
+  summarise(rich_avg = mean(richness)) |> 
+  ggplot() + 
+  geom_col(mapping = aes(x = factor(periodnum), y = rich_avg), 
+                         fill = "slategray2",
+                         color = "slategray4") + 
+  labs(x = "Time Period", 
+         y = "Average species richness in Prince Albert National Park") +
+  scale_x_discrete(labels=c("1" = "December to mid-January", 
+                            "2" = "Mid-January to mid-February", 
+                            "3" = "Mid February to end of winter"))         
+
+```
+
+
