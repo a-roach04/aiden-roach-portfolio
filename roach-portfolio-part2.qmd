@@ -56,11 +56,19 @@ mammal_clean |>
   summarise(rich_avg = mean(richness)) |> 
   ggplot() + 
   geom_col(mapping = aes(x = temp, 
-                         y = rich_avg), 
-                         fill = "skyblue2",
-                         color = "skyblue4") + 
+                         y = rich_avg),
+           fill = "skyblue2",
+           color = "skyblue4",
+           just = 0,
+           width = 1) + 
   labs(x = "Daily temperature, in Celsius, in Prince Albert National Park", 
-         y = "Average species richness")      
+         y = "Average species richness") + 
+  geom_smooth(method = NULL,
+              mapping = aes(x = temp, 
+                         y = rich_avg), 
+              color = "skyblue4", 
+              linetype = "solid",
+              se = FALSE)
 
 ```
 
