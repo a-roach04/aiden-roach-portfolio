@@ -162,4 +162,3 @@ mammal_clean |>
   labs(x = "Time Period", 
          y = "Number of Each Species' Occurances in Prince Albert National Park")
 ```
-
