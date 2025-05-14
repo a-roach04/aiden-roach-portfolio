@@ -102,20 +102,20 @@
     "href": "example.html#plant-communities",
     "title": "Examples of Work",
     "section": "Plant Communities",
-    "text": "Plant Communities\nParagraph\n\n\n\n\n\nColumn plot showing relationship between plant community and average species richness\n\n\n\n\n\n\n\n\n\nColumn plot showing relationship of number of observed mammals across plant communities"
+    "text": "Plant Communities\nThe first graphic shows that there is some variation in average species richness between the different plant communities. Tamarack bog was the least diverse with an average species richness of about 0.5. Dry grassland was the most diverse with an average species richness of about 0.95. The second graphic shows how each individual mammal counts vary across the plant communities. Some mammals, such as deer and wolves, have visually higher counts in certain communities compared to others. Some mammals, such as voles and muskrats, have a similar count across all communities. Not only does species richness appear to vary across the different plant communities, but it appears that some mammals have a clear preference for some communities over others.\n\n\n\n\n\nColumn plot showing relationship between plant community and average species richness.\n\n\n\n\n\n\n\n\n\nColumn plot showing relationship of number of observed mammals across plant communities."
   },
   {
     "objectID": "example.html#temperature",
     "href": "example.html#temperature",
     "title": "Examples of Work",
     "section": "Temperature",
-    "text": "Temperature\nparagraph\n\n\n\n\n\nScatterplot showing relationship between daily temperature, in Celsius, and average species richness\n\n\n\n\n\n\n\n\n\nScatterplot showing relationship of number of observed mammals across daily temperatures"
+    "text": "Temperature\nThe first graphic shows that as the daily temperature increases the average species richness decreases. However, when looking at the graphic, it appears there is a flat section where average species richness does not change from about -15 to 0 degrees before the average richness drops back off. The second graphic shows how each individual mammal counts vary across daily temperature. Some mammals, such as foxes and hares, have an arced pattern. Some mammals, such as shrews and ravens, have a similar counts across the daily temperatures. This arced pattern implies that there is an ideal temperature that is not too warm or too cold for certain mammals to be active in winter. However, some mammals seem to have no preference in temperature as their count remained constant over all the recorded daily temperatures.\n\n\n\n\n\nScatterplot showing relationship between daily temperature, in Celsius, and average species richness.\n\n\n\n\n\n\n\n\n\nScatterplot showing relationship of number of observed mammals across daily temperatures."
   },
   {
     "objectID": "example.html#time-period",
     "href": "example.html#time-period",
     "title": "Examples of Work",
     "section": "Time Period",
-    "text": "Time Period\nparagraph\n\n\n\n\n\nColumn chart showing relationship between time period and average species richness\n\n\n\n\n\n\n\n\n\nColumn chart showing relationship of number of observed mammals across time periods"
+    "text": "Time Period\nThe first graphic shows that as winter progresses the average species richness increases. Early winter had an average species richness of about 0.75. Late winter had an average species richness of about 0.85. The second graphic shows how each individual mammal counts varies as winter progresses. Some mammals, such as coyotes and fishers, have visually higher counts at certain time periods compared to others. Some mammals, such as wolverines and moles, have a similar count across winter. Not only does species richness appear to increase as winter progresses, but it appears that some mammals have a clear preference for certain periods of winter while others are observed consistently throughout winter.\n\n\n\n\n\nColumn chart showing relationship between time period and average species richness.\n\n\n\n\n\n\n\n\n\nColumn chart showing relationship of number of observed mammals across time periods."
   }
 ]

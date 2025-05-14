@@ -12,15 +12,15 @@ In order to answer these research questions, the data has to be edited to make v
 
 ## Plant Communities
 
-Paragraph
+The first graphic shows that there is some variation in average species richness between the different plant communities. Tamarack bog was the least diverse with an average species richness of about 0.5. Dry grassland was the most diverse with an average species richness of about 0.95. The second graphic shows how each individual mammal counts vary across the plant communities. Some mammals, such as deer and wolves, have visually higher counts in certain communities compared to others. Some mammals, such as voles and muskrats, have a similar count across all communities. Not only does species richness appear to vary across the different plant communities, but it appears that some mammals have a clear preference for some communities over others.
 
 ```{r}
 #| label: plant-community-overall-graphics
 #| echo: FALSE
 #| message: FALSE
 #| warning: FALSE
-#| fig-cap: "Column plot showing relationship between plant community and average species richness"
-#| fig-alt: ""
+#| fig-cap: "Column plot showing relationship between plant community and average species richness."
+#| fig-alt: "Column plot showing relationship between plant community and average species richness. Tamarack bog was the least diverse with an average species richness of about 0.5. Dry grassland was the most diverse with an average species richness of about 0.95."
 
 library(tidyverse) #load necessary package
 mammal_clean <- read_csv("data-clean/mammal_clean.csv") #read in data
@@ -53,8 +53,8 @@ mammal_clean |> #use mammal_clean data
 #| echo: FALSE
 #| message: FALSE
 #| warning: FALSE
-#| fig-cap: "Column plot showing relationship of number of observed mammals across plant communities"
-#| fig-alt: ""
+#| fig-cap: "Column plot showing relationship of number of observed mammals across plant communities."
+#| fig-alt: "Column plot showing relationship of number of observed mammals across plant communities. Some mammals have clear preferences as shown in the higher count in some plant communities while other mammals have relatively even counts across plant communities."
 #| fig-height: 10
 #| fig-width: 15
 
@@ -81,15 +81,15 @@ mammal_clean |> #use this data
 
 ## Temperature
 
-paragraph
+The first graphic shows that as the daily temperature increases the average species richness decreases. However, when looking at the graphic, it appears there is a flat section where average species richness does not change from about -15 to 0 degrees before the average richness drops back off. The second graphic shows how each individual mammal counts vary across daily temperature. Some mammals, such as foxes and hares, have an arced pattern. Some mammals, such as shrews and ravens, have a similar counts across the daily temperatures. This arced pattern implies that there is an ideal temperature that is not too warm or too cold for certain mammals to be active in winter. However, some mammals seem to have no preference in temperature as their count remained constant over all the recorded daily temperatures.
 
 ```{r}
 #| label: temperature-overall-graphics
 #| echo: FALSE
 #| message: FALSE
 #| warning: FALSE
-#| fig-cap: "Scatterplot showing relationship between daily temperature, in Celsius, and average species richness"
-#| fig-alt: ""
+#| fig-cap: "Scatterplot showing relationship between daily temperature, in Celsius, and average species richness."
+#| fig-alt: "Scatterplot showing relationship between daily temperature, in Celsius, and average species richness. As daily temperature increases, average species richness decreases."
 
 mammal_clean |> #use this dataset
   select(temp, richness) |> #select these variables
@@ -116,8 +116,8 @@ mammal_clean |> #use this dataset
 #| echo: FALSE
 #| message: FALSE
 #| warning: FALSE
-#| fig-cap: "Scatterplot showing relationship of number of observed mammals across daily temperatures"
-#| fig-alt: ""
+#| fig-cap: "Scatterplot showing relationship of number of observed mammals across daily temperatures."
+#| fig-alt: "Column plot showing relationship of number of observed mammals across daily temperatures. Some mammals have clear preferences as shown in the higher count during certain temperatures while other mammals have relatively even counts across temperature."
 #| fig-height: 10
 #| fig-width: 15
 
@@ -149,15 +149,15 @@ mammal_clean |> #use this data
 
 ## Time Period
 
-paragraph
+The first graphic shows that as winter progresses the average species richness increases. Early winter had an average species richness of about 0.75. Late winter had an average species richness of about 0.85. The second graphic shows how each individual mammal counts varies as winter progresses. Some mammals, such as coyotes and fishers, have visually higher counts at certain time periods compared to others. Some mammals, such as wolverines and moles, have a similar count across winter. Not only does species richness appear to increase as winter progresses, but it appears that some mammals have a clear preference for certain periods of winter while others are observed consistently throughout winter.
 
 ```{r}
 #| label: period-overall-graphics
 #| echo: FALSE
 #| message: FALSE
 #| warning: FALSE
-#| fig-cap: "Column chart showing relationship between time period and average species richness"
-#| fig-alt: ""
+#| fig-cap: "Column chart showing relationship between time period and average species richness."
+#| fig-alt: "Column chart showing relationship between time period and average species richness. Early winter had the lowest average species richness of about 0.75. Late winter had the highest average species richness of about 0.85."
 
 mammal_clean |> #use this data
   select(periodnum, richness) |> #select these variables
@@ -171,7 +171,7 @@ mammal_clean |> #use this data
   labs(x = "Time Period", #label the x axis
        y = "Average species richness in Prince Albert National Park", #label the y axis
        title = "Relationship Between Time Period and Average Species Richness") + #label the title
-  scale_x_discrete(labels=c("1" = "December to mid-January", #time period 1 represents early winter
+  scale_x_discrete(labels = c("1" = "December to mid-January", #time period 1 represents early winter
                             "2" = "Mid-January to mid-February", #time period 2 represents mid winter
                             "3" = "Mid February to end of winter"))    #time period 3 represents late winter     
 
@@ -182,8 +182,8 @@ mammal_clean |> #use this data
 #| echo: FALSE
 #| message: FALSE
 #| warning: FALSE
-#| fig-cap: "Column chart showing relationship of number of observed mammals across time periods"
-#| fig-alt: ""
+#| fig-cap: "Column chart showing relationship of number of observed mammals across time periods."
+#| fig-alt: "Column chart showing relationship of number of observed mammals across time periods. Some mammals have clear preferences as shown in the higher count during certain time periods while other mammals have relatively even counts across winter."
 #| fig-height: 10
 #| fig-width: 15
 
