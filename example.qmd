@@ -2,15 +2,15 @@
 title: "Examples of Work"
 ---
 
-# Data Description
+## Data Description
 
 For this project, I used a dataset looking at mammal abundance in Prince Albert National Park in Canada. The data was collected using seven snow transects. After 48 hours, the tracks left by mammals were recorded every 100 meters. The transects were refreshed either by fresh snowfall or by a drag pulled by a snowmobile. There are a lot of variables included, but the most important ones for my research questions are period which is recorded as a character, month, day, and year which are recorded as integers, cloudcover which is an integer, precipitation which is a character, temperature which is an integer, and plant community which is a character. Each species is listed as a variable with their presence recorded at a one and their absence recorded as a zero. Some research questions I want to answer are how does species abundance vary over time, over temperature, and over different plant communities?
 
-# Data Cleaning
+## Data Cleaning
 
 In order to answer these research questions, the data has to be edited to make visualization easier. First, I selected only the variables I am interested in. Then, since values considered N/A were not recognized by R, I had to reassign the missing values so that R could understand those values were missing. Next, I reassigned the types of variables recorded to ensure that words were being interpreted by R as words and that numbers were being interpreted by R as numbers. The final step to clean this data was rotating the data so that each row contained the information for a singular observation rather than multiple. This makes visualization much easier!
 
-# Plant Communities
+## Plant Communities
 
 Paragraph
 
@@ -72,11 +72,14 @@ mammal_clean |> #use this data
   facet_wrap(~mammal) + #put each mammal in its own graphic
   labs(x = "Plant community in Prince Albert National Park, Canada", #label for the x axis
        y = "Number of Each Species' Occurances", #label for the y axis
-       title = "Relationship of Number of Observed Mammals Across Plant Communities") # label for the title
+       title = "Relationship of Number of Observed Mammals Across Plant Communities") + # label for the title
+  theme(axis.title.x = element_text(size = 20)) + #make the x label text larger
+  theme(axis.title.y = element_text(size = 20)) + #make the y label text larger
+  theme(title = element_text(size = 25)) #make the title text larger
 
 ```
 
-# Temperature
+## Temperature
 
 paragraph
 
@@ -113,8 +116,8 @@ mammal_clean |> #use this dataset
 #| echo: FALSE
 #| message: FALSE
 #| warning: FALSE
-#| fig-cap: "Polar axis plot"
-#| fig-alt: "Scatterplot showing relationship of number of observed mammals across daily temperatures"
+#| fig-cap: "Scatterplot showing relationship of number of observed mammals across daily temperatures"
+#| fig-alt: ""
 #| fig-height: 10
 #| fig-width: 15
 
@@ -132,6 +135,9 @@ mammal_clean |> #use this data
   labs(x = "Daily temperature, in Celsius, in Prince Albert National Park, Canada", #label the x axis 
        y = "Number of Each Species' Occurances", #label the y axis
        title = "Relationship of Number of Observed Mammals Across Daily Temperatures") + #label the title
+  theme(axis.title.x = element_text(size = 20)) + #make the x label text larger
+  theme(axis.title.y = element_text(size = 20)) + #make the y label text larger
+  theme(title = element_text(size = 25)) + #make the title text larger
   geom_smooth(method = NULL, #create a trendline for each mammal
               mapping = aes(x = temp, #use temp at the x
                          y = n), #use count as the y
@@ -141,7 +147,7 @@ mammal_clean |> #use this data
 
 ```
 
-# Time Period
+## Time Period
 
 paragraph
 
@@ -195,5 +201,8 @@ mammal_clean |> #use this data
   facet_wrap(~mammal) + #put each mammal in its own graphic
   labs(x = "Time Period", #label the x axis
        y = "Number of Each Species' Occurances in Prince Albert National Park", #label the y axis
-       title = "Relationship of Number of Observed Mammals Across Time Periods") #label the title
+       title = "Relationship of Number of Observed Mammals Across Time Periods") + #label the title
+  theme(axis.title.x = element_text(size = 20)) + #make the x label text larger
+  theme(axis.title.y = element_text(size = 20)) + #make the y label text larger
+  theme(title = element_text(size = 25)) #make the title text larger
 ```
