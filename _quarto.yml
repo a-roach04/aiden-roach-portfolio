@@ -10,6 +10,8 @@ website:
         text: "Home"
       - href: about.qmd
         text: "About Me"
+      - href: example.qmd
+        text: "Examples of Work"
 
 format:
   html:

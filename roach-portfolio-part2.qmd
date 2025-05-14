@@ -17,19 +17,21 @@ mammal_clean <- mammal_dirty |>
   select(!c(surveyyear, transect, dss, period, snowstart, snowmid, snowend, observer, obsnum, dirwind, crustart, crumid,cruend, ytemp, ywind, ywdir, segment, segid, comments)) |> #remove unneeded variables
   mutate(across(where(is.character), ~na_if(., "na"))) |> #reassign NA values
   mutate(month = as.double(month), snowave = as.numeric(snowave), cloudcover = as.numeric(cloudcover), avewind = as.numeric(avewind), precip = as.numeric(precip), temp = as.numeric(temp), periodnum = as.character(periodnum), plantcomm = as.character(plantcomm)) #reassign variable types
+
+write.csv(mammal_clean, "data-clean/mammal_clean.csv")
 ```
 
 ## Part 2 - Data Visualization
 
 ```{r}
-#| label: plant-community-graphics
+#| label: plant-community-overall-graphics
 
 mammal_clean |> 
   select(plantcomm, richness) |>
   group_by(plantcomm) |> 
-  summarise(rich_avg = mean(richness)) |> 
+  summarise(rich_avg = mean(richness, na.rm = TRUE)) |> 
   ggplot() + 
-  geom_col(mapping = aes(x = fct_infreq(plantcomm), 
+  geom_col(mapping = aes(x = fct_reorder(plantcomm, rich_avg), 
                          y = rich_avg), 
                          fill = "forestgreen",
                          color = "darkgreen") + 
@@ -43,17 +45,38 @@ mammal_clean |>
                             "mw" = "Mixed Wood", 
                             "rip" = "Riparian", 
                             "wg" = "Wet Grassland")) + 
-  theme(axis.text.x = element_text(size = 8, angle = 15))
+  theme(axis.text.x = element_text(size = 8, angle = 8))        
+```
+
+```{r}
+#| label: plant-community-species-graphics
+#| fig-height: 10
+#| fig-width: 15
+
+mammal_clean |> 
+  select(plantcomm, deer, moose, elk, wolf, coyote, fox, caribou, lynx, fisher, marten, bison, mink, otter, grouse, hare, weasel, ermine, mouse, raven, squirrel, wolverine, muskrat, mole, shrew, vole, other) |>
+  pivot_longer(cols = 2:27, names_to = "mammal",
+               values_to = "presence") |>
+  group_by(mammal, plantcomm) |> 
+  tally(presence) |> 
+  ggplot() + 
+  geom_col(mapping = aes(x = plantcomm, 
+                         y = n),
+           fill = "forestgreen",
+           color = "darkgreen") + 
+  facet_wrap(~mammal) + 
+  labs(x = "Plant community in Prince Albert National Park, Canada", 
+         y = "Number of Each Species' Occurances")
 
 ```
 
 ```{r}
-#| label: temperature-graphics
+#| label: temperature-overall-graphics
 
 mammal_clean |> 
   select(temp, richness) |> 
   group_by(temp) |> 
-  summarise(rich_avg = mean(richness)) |> 
+  summarise(rich_avg = mean(richness, na.rm = TRUE)) |> 
   ggplot() + 
   geom_col(mapping = aes(x = temp, 
                          y = rich_avg),
@@ -73,7 +96,35 @@ mammal_clean |>
 ```
 
 ```{r}
-#| label: period-graphics
+#| label: temperature-species-graphics
+#| fig-height: 10
+#| fig-width: 15
+
+mammal_clean |> 
+  select(temp, deer, moose, elk, wolf, coyote, fox, caribou, lynx, fisher, marten, bison, mink, otter, grouse, hare, weasel, ermine, mouse, raven, squirrel, wolverine, muskrat, mole, shrew, vole, other) |>
+  pivot_longer(cols = 2:27, names_to = "mammal",
+               values_to = "presence") |>
+  group_by(mammal, temp) |> 
+  tally(presence) |> 
+  ggplot() + 
+  geom_col(mapping = aes(x = temp, 
+                         y = n),
+           fill = "skyblue2",
+           color = "skyblue4") + 
+  facet_wrap(~mammal) + 
+  labs(x = "Daily temperature, in Celsius, in Prince Albert National Park, Canada", 
+         y = "Number of Each Species' Occurances") + 
+  geom_smooth(method = NULL,
+              mapping = aes(x = temp, 
+                         y = n), 
+              color = "skyblue4", 
+              linetype = "solid",
+              se = FALSE)
+
+```
+
+```{r}
+#| label: period-overall-graphics
 
 mammal_clean |> 
   select(periodnum, richness) |> 
@@ -91,4 +142,24 @@ mammal_clean |>
 
 ```
 
+```{r}
+#| label: period-species-graphics
+#| fig-height: 10
+#| fig-width: 15
+
+mammal_clean |> 
+  select(periodnum, deer, moose, elk, wolf, coyote, fox, caribou, lynx, fisher, marten, bison, mink, otter, grouse, hare, weasel, ermine, mouse, raven, squirrel, wolverine, muskrat, mole, shrew, vole, other) |>
+  pivot_longer(cols = 2:27, names_to = "mammal",
+               values_to = "presence") |>
+  group_by(mammal, periodnum) |> 
+  tally(presence) |> 
+  ggplot() + 
+  geom_col(mapping = aes(x = periodnum, 
+                         y = n),
+           fill = "slategray2",
+           color = "slategray4") + 
+  facet_wrap(~mammal) + 
+  labs(x = "Time Period", 
+         y = "Number of Each Species' Occurances in Prince Albert National Park")
+```
 
