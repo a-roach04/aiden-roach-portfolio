@@ -17,9 +17,12 @@ Paragraph
 ```{r}
 #| label: plant-community-overall-graphics
 #| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
 #| fig-cap: "Column plot showing relationship between plant community and average species richness"
 #| fig-alt: ""
 
+library(tidyverse) #load necessary package
 mammal_clean <- read_csv("data-clean/mammal_clean.csv") #read in data
 
 mammal_clean |> #use mammal_clean data
@@ -48,6 +51,8 @@ mammal_clean |> #use mammal_clean data
 ```{r}
 #| label: plant-community-species-graphics
 #| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
 #| fig-cap: "Column plot showing relationship of number of observed mammals across plant communities"
 #| fig-alt: ""
 #| fig-height: 10
@@ -78,6 +83,8 @@ paragraph
 ```{r}
 #| label: temperature-overall-graphics
 #| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
 #| fig-cap: "Scatterplot showing relationship between daily temperature, in Celsius, and average species richness"
 #| fig-alt: ""
 
@@ -104,6 +111,8 @@ mammal_clean |> #use this dataset
 ```{r}
 #| label: temperature-species-graphics
 #| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
 #| fig-cap: "Polar axis plot"
 #| fig-alt: "Scatterplot showing relationship of number of observed mammals across daily temperatures"
 #| fig-height: 10
@@ -139,6 +148,8 @@ paragraph
 ```{r}
 #| label: period-overall-graphics
 #| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
 #| fig-cap: "Column chart showing relationship between time period and average species richness"
 #| fig-alt: ""
 
@@ -163,6 +174,8 @@ mammal_clean |> #use this data
 ```{r}
 #| label: period-species-graphics
 #| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
 #| fig-cap: "Column chart showing relationship of number of observed mammals across time periods"
 #| fig-alt: ""
 #| fig-height: 10

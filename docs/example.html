@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Aiden Roach">
 
-<title>Portfolio: Part 1 – Aiden Roach’s ePortfolio</title>
+<title>Examples of Work – Aiden Roach’s ePortfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -98,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./example.html"> 
+    <a class="nav-link active" href="./example.html" aria-current="page"> 
 <span class="menu-text">Examples of Work</span></a>
   </li>  
 </ul>
@@ -117,30 +116,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link active" data-scroll-target="#data-description">Data Description</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">1.</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2.</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">3.</a></li>
-  </ul></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a>
-  <ul class="collapse">
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">1.</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2.</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">3.</a></li>
-  </ul></li>
-  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a>
-  <ul class="collapse">
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">1.</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">2.</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">3.</a></li>
-  <li><a href="#section-9" id="toc-section-9" class="nav-link" data-scroll-target="#section-9">4.</a></li>
-  <li><a href="#section-10" id="toc-section-10" class="nav-link" data-scroll-target="#section-10">5.</a></li>
-  <li><a href="#section-11" id="toc-section-11" class="nav-link" data-scroll-target="#section-11">6.</a></li>
-  <li><a href="#section-12" id="toc-section-12" class="nav-link" data-scroll-target="#section-12">7.</a></li>
-  <li><a href="#section-13" id="toc-section-13" class="nav-link" data-scroll-target="#section-13">8.</a></li>
-  <li><a href="#section-14" id="toc-section-14" class="nav-link" data-scroll-target="#section-14">9.</a></li>
-  </ul></li>
+  <li><a href="#data-description" id="toc-data-description" class="nav-link active" data-scroll-target="#data-description">Data Description</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
+  <li><a href="#plant-communities" id="toc-plant-communities" class="nav-link" data-scroll-target="#plant-communities">Plant Communities</a></li>
+  <li><a href="#temperature" id="toc-temperature" class="nav-link" data-scroll-target="#temperature">Temperature</a></li>
+  <li><a href="#time-period" id="toc-time-period" class="nav-link" data-scroll-target="#time-period">Time Period</a></li>
   </ul>
 </nav>
     </div>
@@ -149,19 +129,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Portfolio: Part 1</h1>
+<h1 class="title">Examples of Work</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Aiden Roach </p>
-          </div>
-  </div>
     
   
     
@@ -172,122 +146,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="data-description" class="level2">
-<h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">1.</h3>
-<p>Identify your data source.</p>
-<blockquote class="blockquote">
-<p>My data comes from Prince Albert National Park in Canada.</p>
-</blockquote>
+<section id="data-description" class="level1">
+<h1>Data Description</h1>
+<p>For this project, I used a dataset looking at mammal abundance in Prince Albert National Park in Canada. The data was collected using seven snow transects. After 48 hours, the tracks left by mammals were recorded every 100 meters. The transects were refreshed either by fresh snowfall or by a drag pulled by a snowmobile. There are a lot of variables included, but the most important ones for my research questions are period which is recorded as a character, month, day, and year which are recorded as integers, cloudcover which is an integer, precipitation which is a character, temperature which is an integer, and plant community which is a character. Each species is listed as a variable with their presence recorded at a one and their absence recorded as a zero. Some research questions I want to answer are how does species abundance vary over time, over temperature, and over different plant communities?</p>
 </section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">2.</h3>
-<p>Describe your data, including variables and data types.</p>
-<blockquote class="blockquote">
-<p>The data was collected using seven snow transects. After 48 hours, the tracks left by mammals were recorded every 100 meters. The transects were refreshed either by fresh snowfall or by a drag pulled by a snowmobile. There are a lot of variables included, but the most important ones for my research questions are period which is recorded as a character, month, day, and year which are recorded as integers, cloudcover which is an integer, precipetation which is a character, temperature which is an integer, and plant community which is a character. Each species is listed as a variable with their presence recorded at a one and their absence recorded as a zero.</p>
-</blockquote>
+<section id="data-cleaning" class="level1">
+<h1>Data Cleaning</h1>
+<p>In order to answer these research questions, the data has to be edited to make visualization easier. First, I selected only the variables I am interested in. Then, since values considered N/A were not recognized by R, I had to reassign the missing values so that R could understand those values were missing. Next, I reassigned the types of variables recorded to ensure that words were being interpreted by R as words and that numbers were being interpreted by R as numbers. The final step to clean this data was rotating the data so that each row contained the information for a singular observation rather than multiple. This makes visualization much easier!</p>
 </section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">3.</h3>
-<p>Identify the research questions you want to answer.</p>
-<blockquote class="blockquote">
-<p>Some research questions I want to answer are how does species abundance vary over time, over temperature, and/or over different plant communities?</p>
-</blockquote>
+<section id="plant-communities" class="level1">
+<h1>Plant Communities</h1>
+<p>Paragraph</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="example_files/figure-html/plant-community-overall-graphics-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Column plot showing relationship between plant community and average species richness</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="example_files/figure-html/plant-community-species-graphics-1.png" class="img-fluid figure-img" width="1440"></p>
+<figcaption>Column plot showing relationship of number of observed mammals across plant communities</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
+<section id="temperature" class="level1">
+<h1>Temperature</h1>
+<p>paragraph</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="example_files/figure-html/temperature-overall-graphics-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Scatterplot showing relationship between daily temperature, in Celsius, and average species richness</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="example_files/figure-html/temperature-species-graphics-1.png" class="img-fluid figure-img" alt="Scatterplot showing relationship of number of observed mammals across daily temperatures" width="1440"></p>
+<figcaption>Polar axis plot</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="data-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="data-visualization">Data Visualization</h2>
-<section id="section-3" class="level3">
-<h3 class="anchored" data-anchor-id="section-3">1.</h3>
-<p>What do you want your final visualizations to look like?</p>
-<blockquote class="blockquote">
-<p>I think I will do scatterplots with time/ temperature on the x axis with abundance on the y axis. Then I would color by species to show when certain species were present or absent. For plant communities, I would have a bar chart with community on the x axis and overall species richness on the y axis. I might also split the data into small, medium, and large mammal categories to declutter the graphics.</p>
-</blockquote>
-</section>
-<section id="section-4" class="level3">
-<h3 class="anchored" data-anchor-id="section-4">2.</h3>
-<p>What do you want to highlight on your final visualizations in order to answer your research questions? How do you plan to do that?</p>
-<blockquote class="blockquote">
-<p>I want to highlight the variety of species by coloring by species or spliting in small, medium, or large categories.</p>
-</blockquote>
-</section>
-<section id="section-5" class="level3">
-<h3 class="anchored" data-anchor-id="section-5">3.</h3>
-<p>What is missing from your data or would need to change in your data to create these visualizations?</p>
-<blockquote class="blockquote">
-<p>I would have to create the small, medium, and large categories myself. I would look into each species to create the bins. EX: if the average hare size is 6 pounds they might fit better in the small bin, but if the average hare is 8 pounds they might fit in the medium bin.</p>
-</blockquote>
-</section>
-</section>
-<section id="data-cleaning" class="level2">
-<h2 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h2>
-<p>The answer to at least three of these questions should be “YES” for the data to meet the necessary standards to demonstrate your cleaning. Your data source should not be an already perfectly prepared data set.</p>
-<section id="section-6" class="level3">
-<h3 class="anchored" data-anchor-id="section-6">1.</h3>
-<p>Do you need to reformat any variables into different types (e.g.&nbsp;factors, time, dates, strings)? Or remove information from variable values?</p>
-<blockquote class="blockquote">
-<p>No, I don’t think I need to reformat any variables.</p>
-</blockquote>
-</section>
-<section id="section-7" class="level3">
-<h3 class="anchored" data-anchor-id="section-7">2.</h3>
-<p>Do you need to deal with any missing data, especially missing data coded other than NA?</p>
-<blockquote class="blockquote">
-<p>Yes, any missing values are just recorded as “na” and are not registered as a missing value.</p>
-</blockquote>
-</section>
-<section id="section-8" class="level3">
-<h3 class="anchored" data-anchor-id="section-8">3.</h3>
-<p>Do you need to filter your data? How?</p>
-<blockquote class="blockquote">
-<p>No, I don’t need to filter the data.</p>
-</blockquote>
-</section>
-<section id="section-9" class="level3">
-<h3 class="anchored" data-anchor-id="section-9">4.</h3>
-<p>Do you need to create any new variables? What variables? How?</p>
-<blockquote class="blockquote">
-<p>Yes, I would use mutate to create the size bins I mentioned earlier.</p>
-</blockquote>
-</section>
-<section id="section-10" class="level3">
-<h3 class="anchored" data-anchor-id="section-10">5.</h3>
-<p>Do you need to add new data (join) to your data? What data? How?</p>
-<blockquote class="blockquote">
-<p>No, as of right now I don’t think I need to add new data.</p>
-</blockquote>
-</section>
-<section id="section-11" class="level3">
-<h3 class="anchored" data-anchor-id="section-11">6.</h3>
-<p>Are there any variables you can exclude from your data?</p>
-<blockquote class="blockquote">
-<p>Yes, I can exclude the snow start, middle, and end times.</p>
-</blockquote>
-</section>
-<section id="section-12" class="level3">
-<h3 class="anchored" data-anchor-id="section-12">7.</h3>
-<p>Do you need pivot your data in any way? Why? How?</p>
-<blockquote class="blockquote">
-<p>No, I don’t think I need to pivot my data.</p>
-</blockquote>
-</section>
-<section id="section-13" class="level3">
-<h3 class="anchored" data-anchor-id="section-13">8.</h3>
-<p>Do you need to summarize any of the variables? Which ones? How?</p>
-<blockquote class="blockquote">
-<p>Yes, I would summarize the total number of times each species was observed.</p>
-</blockquote>
-</section>
-<section id="section-14" class="level3">
-<h3 class="anchored" data-anchor-id="section-14">9.</h3>
-<p>What other aspects of your data need to be “fixed” in order to make your data visualizations?</p>
-<blockquote class="blockquote">
-<p>I could maybe condense month, day, and year into a singular time variable.</p>
-</blockquote>
+<section id="time-period" class="level1">
+<h1>Time Period</h1>
+<p>paragraph</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="example_files/figure-html/period-overall-graphics-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Column chart showing relationship between time period and average species richness</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="example_files/figure-html/period-species-graphics-1.png" class="img-fluid figure-img" width="1440"></p>
+<figcaption>Column chart showing relationship of number of observed mammals across time periods</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
